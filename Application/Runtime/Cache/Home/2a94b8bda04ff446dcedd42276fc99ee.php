@@ -7,9 +7,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>公司主页3</title>
-	<link href="/product/Public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/product/Public/css/modern-business.css" rel="stylesheet">
-    <link href="/product/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/git/Public/css/modern-business.css" rel="stylesheet">
+    <link href="/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>	
@@ -23,7 +23,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/product">互联网金融</a>
+					<a class="navbar-brand" href="/git">互联网金融</a>
 				</div>
 				<!--其他链接 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,19 +69,19 @@
 <!-- 滚动包装 -->
 <div class="carousel-inner">
 	<div class="item active">
-		<div class="fill" style="background-image:url('/product/Public/images/fish.jpg');"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/fish.jpg');"></div>
 		<div class="carousel-caption">
 			<h2>标题 1</h2>
 		</div>
 	</div>
 	<div class="item">
-		<div class="fill" style="background-image:url('/product/Public/images/title.jpg')"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/title.jpg')"></div>
 		<div class="carousel-caption">
 			<h2>标题2</h2>
 		</div>
 	</div>
 	<div class="item">
-		<div class="fill" style="background-image:url('/product/Public/images/qw.jpg')"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/qw.jpg')"></div>
 		<div class="carousel-caption">
 			<h2>标题3</h2>
 		</div>
@@ -117,15 +117,15 @@
 		<div class="col-md-12">
 
 			<div class="second-one">
-				<img src="/product/Public/images/blue2.png" style="width:100%" class="img-circle">
+				<img src="/git/Public/images/blue2.png" style="width:100%" class="img-circle">
 			</div>
 
 			<div class="second-one" style="margin: 0 250px 0 250px;">
-				<a href="#" ><img src="/product/Public/images/blue2.png" style="width:100%" class="img-circle"></a>
+				<a href="#" ><img src="/git/Public/images/blue2.png" style="width:100%" class="img-circle"></a>
 			</div>
 
 			<div class="second-one">
-				<img src="/product/Public/images/blue2.png" style="width:100%" class="img-circle">
+				<img src="/git/Public/images/blue2.png" style="width:100%" class="img-circle">
 			</div>
 			
 		</div>
@@ -143,32 +143,32 @@
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/product/Public/images/home1.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home1.jpg" ale="">
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/product/Public/images/home2.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home2.jpg" ale="">
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/product/Public/images/home3.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home3.jpg" ale="">
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/product/Public/images/home4.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home4.jpg" ale="">
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/product/Public/images/food1.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/food1.jpg" ale="">
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/product/Public/images/home6.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home6.jpg" ale="">
 			</a>
 		</div>
 	</div>
@@ -206,7 +206,7 @@
 			</ul>
 		</div>
 		<div class="col-md-6">
-			<img class="img-responsive" src="/product/Public/images/lanmu.jpg" ale="">
+			<img class="img-responsive" src="/git/Public/images/lanmu.jpg" ale="">
 		</div>
 	</div>
 	<!-- 结束 -->
@@ -233,8 +233,8 @@
 									<h4 class="modal-title" id="myModalLabel">标题</h4>
 								</div>
 								<div class="modal-body" style="margin-left:45px">
-									<img src="/product/Public/images/jr.png">
-									<img src="/product/Public/images/jb.png" style="margin-left:50px">
+									<img src="/git/Public/images/jr.png">
+									<img src="/git/Public/images/jb.png" style="margin-left:50px">
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -262,8 +262,8 @@
 
 </div>
 
-<script src="/product/Public/js/jquery.js"></script>
-<script src="/product/Public/js/bootstrap.min.js"></script>
+<script src="/git/Public/js/jquery.js"></script>
+<script src="/git/Public/js/bootstrap.min.js"></script>
 <script>
 $('.carousel').carousel({
 	interval:5000

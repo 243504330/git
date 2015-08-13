@@ -7,9 +7,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>公司主页3</title>
-	<link href="/product/Public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/product/Public/css/modern-business.css" rel="stylesheet">
-    <link href="/product/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/git/Public/css/modern-business.css" rel="stylesheet">
+    <link href="/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>	
@@ -23,7 +23,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/product">互联网金融</a>
+					<a class="navbar-brand" href="/git">互联网金融</a>
 				</div>
 				<!--其他链接 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -87,13 +87,13 @@
 					<!-- 图片 -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img class="img-responsive" src="/product/Public/images/<?php echo ($bimg["bimg1"]); ?>" ale="">
+							<img class="img-responsive" src="/git/Public/images/<?php echo ($bimg["bimg1"]); ?>" ale="">
 						</div>
 						<div class="item">
-							<img class="img-responsive" src="/product/Public/images/<?php echo ($bimg["bimg2"]); ?>" ale="">
+							<img class="img-responsive" src="/git/Public/images/<?php echo ($bimg["bimg2"]); ?>" ale="">
 						</div>
 						<div class="item">
-							<img class="img-responsive" src="/product/Public/images/<?php echo ($bimg["bimg3"]); ?>" ale="">
+							<img class="img-responsive" src="/git/Public/images/<?php echo ($bimg["bimg3"]); ?>" ale="">
 						</div>
 					</div>
 					<!-- 图片end -->
@@ -128,7 +128,7 @@
 		
 		<?php if(is_array($img)): $i = 0; $__LIST__ = $img;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="col-sm-3 img-portfolio">
 				<a href="#">
-					<img class="img-responsive img-hover img-related" src="/product/Public/images/<?php echo ($v["img"]); ?>" ale="">
+					<img class="img-responsive img-hover img-related" src="/git/Public/images/<?php echo ($v["img"]); ?>" ale="">
 				</a>
 			</div><?php endforeach; endif; else: echo "" ;endif; ?>
 		
@@ -150,8 +150,8 @@
 
 </div>
 
-<script src="/product/Public/js/jquery.js"></script>
-<script src="/product/Public/js/bootstrap.min.js"></script>
+<script src="/git/Public/js/jquery.js"></script>
+<script src="/git/Public/js/bootstrap.min.js"></script>
 <script>
 $('.carousel').carousel({
 	interval:5000
