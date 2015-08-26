@@ -9,14 +9,20 @@ return array(
 	'DB_NAME'=>'product',
 	'DB_USER'=>'root',
 	'DB_PWD'=>'root',
-	'DB_PORT'=>3306,
 	'DB_PREFIX'=>'jr_',
 	'DB_CHARSET'=>'utf8',
 	'DB_BUG'=>TRUE,
 
 	'TMPL_PARSE_STRING' =>array(
-	'__JS__'=>'/product/Public/JS/'
-)
+		'__JS__'=>'/product/Public/JS/'
+	),
+
+	'THINK_SDK_QQ' => array(
+		'APP_KEY' => '',
+		'APP_SECRET' => '',
+		'CALLBACK' =>'',
+	),
+
 
 
 );

@@ -7,9 +7,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>公司主页3</title>
-	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/git/Public/css/modern-business.css" rel="stylesheet">
-    <link href="/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/Git/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Git/Public/css/modern-business.css" rel="stylesheet">
+    <link href="/Git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>	
@@ -23,7 +23,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/git">互联网金融</a>
+					<a class="navbar-brand" href="<?php echo U('index/index');?>">互联网金融</a>
 				</div>
 				<!--其他链接 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -79,18 +79,18 @@
 	<!-- 内容身体 -->
 	<div class="row">
 		<div class="col-md-6">
-			<img class="img-responsive img-rounded" src="/git/Public/images/title.jpg" ale="">
+			<img class="img-responsive img-rounded" src="/Git/Public/images/about.jpg" ale="">
 		</div>
 		<div class="col-md-6">
 			<div style="margin-left:30px">
-			<h2>关于我们公司</h2>
+			<h2>关于我们</h2>
 			<h4><p>深圳福田<br>华茂欣园,银杏阁6F<br></p></h4>
 				<div>
 					<p><i class="fa fa-phone"></i>
-						:123-456789
+						:0755-83775006
 					</p>
 					<p><i class="fa fa-envelope-o"></i>
-						:<a href="mailto:243504330@qq.com">243504330@qq.com</a>
+						:<a href="mailto:243504330@qq.com">wangjinbang@wangjinbang.com</a>
 					</p>
 					<p><i class="fa fa-clock-o"></i>
 						:Monday - Friday: 9:00 AM to 5:00 PM
@@ -119,32 +119,32 @@
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/git/Public/images/home1.jpg" alt="">
+				<img class="img-responsive" src="/Git/Public/images/home1.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/git/Public/images/home2.jpg" alt="">
+				<img class="img-responsive" src="/Git/Public/images/home2.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/git/Public/images/home3.jpg" alt="">
+				<img class="img-responsive" src="/Git/Public/images/home3.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/git/Public/images/home4.jpg" alt="">
+				<img class="img-responsive" src="/Git/Public/images/home4.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/git/Public/images/food1.jpg" alt="">
+				<img class="img-responsive" src="/Git/Public/images/food1.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/git/Public/images/home6.jpg" alt="">
+				<img class="img-responsive" src="/Git/Public/images/home6.jpg" alt="">
 			</div>
 		</div>
 	</div>	
@@ -155,23 +155,25 @@
 			<h2 class="page-header">合作伙伴</h2>
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="https://placeholdit.imgix.net/~text?txtsize=66&txt=700%C3%97450&w=700&h=450" alt="">
+			<img class="img-responsive customer-img" src="/Git/Public/images/huoban1.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="https://placeholdit.imgix.net/~text?txtsize=66&txt=700%C3%97450&w=700&h=450" alt="">
+			<img class="img-responsive customer-img" src="/Git/Public/images/huoban2.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="https://placeholdit.imgix.net/~text?txtsize=66&txt=700%C3%97450&w=700&h=450" alt="">
+			<img class="img-responsive customer-img" src="/Git/Public/images/huoban3.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="https://placeholdit.imgix.net/~text?txtsize=66&txt=700%C3%97450&w=700&h=450" alt="">
+			<img class="img-responsive customer-img" src="/Git/Public/images/huoban4.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="https://placeholdit.imgix.net/~text?txtsize=66&txt=700%C3%97450&w=700&h=450" alt="">
+			<img class="img-responsive customer-img" src="/Git/Public/images/huoban5.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="https://placeholdit.imgix.net/~text?txtsize=66&txt=700%C3%97450&w=700&h=450" alt="">
+			<img class="img-responsive customer-img" src="/Git/Public/images/huoban6.png" alt="">
 		</div>
+		
+
 	</div>	
 	<!-- 嘉宾/客户 end-->
 
@@ -188,8 +190,8 @@
 
 </div>
 
-<script src="/git/Public/js/jquery.js"></script>
-<script src="/git/Public/js/bootstrap.min.js"></script>
+<script src="/Git/Public/js/jquery.js"></script>
+<script src="/Git/Public/js/bootstrap.min.js"></script>
 <script>
 $('.carousel').carousel({
 	interval:5000

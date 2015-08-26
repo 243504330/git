@@ -7,9 +7,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>公司主页3</title>
-	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/git/Public/css/modern-business.css" rel="stylesheet">
-    <link href="/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/Git/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Git/Public/css/modern-business.css" rel="stylesheet">
+    <link href="/Git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>	
@@ -23,7 +23,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/git">互联网金融</a>
+					<a class="navbar-brand" href="<?php echo U('index/index');?>">互联网金融</a>
 				</div>
 				<!--其他链接 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -77,7 +77,7 @@
 		<div class="row">
 			<div class="col-md-7">
 				<a href="<?php echo U('salon/salon',array('id'=>$arr['id']));?>">
-					<img class="img-responsive img-hover" src="/git/Public/images/<?php echo ($arr["img"]); ?> "ale="">
+					<img class="img-responsive img-hover" src="/Git/Public/images/<?php echo ($arr["img"]); ?> "ale="">
 				</a>
 			</div>
 			<div class="col-md-5">
@@ -133,8 +133,8 @@
 
 </div>
 
-<script src="/git/Public/js/jquery.js"></script>
-<script src="/git/Public/js/bootstrap.min.js"></script>
+<script src="/Git/Public/js/jquery.js"></script>
+<script src="/Git/Public/js/bootstrap.min.js"></script>
 <script>
 $('.carousel').carousel({
 	interval:5000

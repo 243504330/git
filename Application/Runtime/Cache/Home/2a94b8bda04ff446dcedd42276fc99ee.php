@@ -23,7 +23,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/git">互联网金融</a>
+					<a class="navbar-brand" href="<?php echo U('index/index');?>">互联网金融</a>
 				</div>
 				<!--其他链接 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,21 +69,21 @@
 <!-- 滚动包装 -->
 <div class="carousel-inner">
 	<div class="item active">
-		<div class="fill" style="background-image:url('/git/Public/images/fish.jpg');"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/bs.jpg');"></div>
 		<div class="carousel-caption">
-			<h2>标题 1</h2>
+			<h2></h2>
 		</div>
 	</div>
 	<div class="item">
-		<div class="fill" style="background-image:url('/git/Public/images/title.jpg')"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/index2.jpg')"></div>
 		<div class="carousel-caption">
-			<h2>标题2</h2>
+			<h2></h2>
 		</div>
 	</div>
 	<div class="item">
-		<div class="fill" style="background-image:url('/git/Public/images/qw.jpg')"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/index3.jpg')"></div>
 		<div class="carousel-caption">
-			<h2>标题3</h2>
+			<h2></h2>
 		</div>
 	</div>
 </div>
@@ -107,7 +107,7 @@
 		<div class="col-lg-12">		
 			<h1 class="page-header">
 				<div class="second">
-					我们专注<strong style="color:rgb(234, 196, 98)">媒体</strong>100年
+					我们专注<strong style="color:rgb(234, 196, 98)">互联网金融</strong>100年
 				</div>
 			</h1>
 			
@@ -117,17 +117,14 @@
 		<div class="col-md-12">
 
 			<div class="second-one">
-				<img src="/git/Public/images/blue2.png" style="width:100%" class="img-circle">
+				<a href="#" ><img src="/git/Public/images/lanmu.jpg" style="width:198px;height:178px" class="img-rounded"></a>
 			</div>
 
-			<div class="second-one" style="margin: 0 250px 0 250px;">
-				<a href="#" ><img src="/git/Public/images/blue2.png" style="width:100%" class="img-circle"></a>
+			<div class="second-one" style="margin: 0 20px 0 250px;">
+				<a href="../../wangjinbang.com" target="view_window"><img src="/git/Public/images/wjb.jpg" style="width:198px;height:178px" class=""></a>
 			</div>
 
-			<div class="second-one">
-				<img src="/git/Public/images/blue2.png" style="width:100%" class="img-circle">
-			</div>
-			
+		
 		</div>
 
 	</div>
@@ -158,19 +155,10 @@
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home4.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/homee.jpg" ale="">
 			</a>
 		</div>
-		<div class="col-md-4 col-sm-6">
-			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/food1.jpg" ale="">
-			</a>
-		</div>
-		<div class="col-md-4 col-sm-6">
-			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home6.jpg" ale="">
-			</a>
-		</div>
+		
 	</div>
 	<!-- 结束 -->
 	<!-- 公司特点等 -->
@@ -216,7 +204,7 @@
 	<div class="well">
 		<div class="row">
 			<div class="col-md-8">
-				<P>说说说......</p>					
+				<P></p>					
 			</div>
 			<div class="col-md-4">
 				<!-- 遮罩 -->

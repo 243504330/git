@@ -7,12 +7,12 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>公司主页3</title>
-	<link href="/product/Public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/product/Public/css/modern-business.css" rel="stylesheet">
-    <link href="/product/Public/css/editor.css" rel="stylesheet">
+	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/git/Public/css/modern-business.css" rel="stylesheet">
+    <link href="/git/Public/css/editor.css" rel="stylesheet">
     <link href="http://www.bootcss.com/p/layoutit/css/bootstrap-combined.min.css" rel="stylesheet">
 	<link href="http://www.bootcss.com/p/layoutit/css/layoutit.css" rel="stylesheet">
-    <link href="/product/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -169,8 +169,10 @@
 
 
 
-<script src="/product/Public/js/jquery.js"></script>
-<script src="/product/Public/js/bootstrap.min.js"></script>
+<script src="/git/Public/js/jquery.js"></script>
+<script src="/git/Public/js/bootstrap.min.js"></script>
+
+
 
 </body>
 </html>
