@@ -15,13 +15,31 @@ class IndexController extends CommonController{
     	//redirect($sdk->getRequestCodeURL());
     	//$this->display();
     	//$this->param_isset('POST',array('email','pwd'));
-    	$clean['email'] = Filter::get_str('243504330@qq.com');   	
-    	$clean['pwd'] = Filter::get_str('cs1234');
-    	$clean['pwd'] = Filter::get_salt_pwd($clean['pwd']);
+        $_POST['id'] = '1';
+        $_POST['email'] = '243504330@qq.com';
+        $_POST['pwd'] = 'cs1234';
+      
+        $this->param_isset('POST',array('id','email','pwd'));
 
-    	$info = D('user')->get();
-    	dump($info);
+       
+        $pwd['id'] = 'sdsssss';
+        $pwd['pwd'] = Filter::get_str($_POST['pwd']);
+        $pwd['pwd'] = Filter::get_salt_pwd($pwd['pwd']);
+        
 
+        $this->check_param($pwd);
+
+        $arr = D('user')->login($pwd);
+        
+        $data['info'] = 'SUCCESS';
+        $this->ajaxReturn($data);
+
+           
+        
+           
+        
+           
+       
     	
     	
 
