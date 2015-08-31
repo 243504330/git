@@ -7,9 +7,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>公司主页3</title>
-	<link href="/Git/Public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Git/Public/css/modern-business.css" rel="stylesheet">
-    <link href="/Git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/git/Public/css/modern-business.css" rel="stylesheet">
+    <link href="/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>	
@@ -28,8 +28,19 @@
 				<!--其他链接 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="<?php echo U('about/index');?>">关于我们</a>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我们<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="<?php echo U('about/index');?>">公司简介</a>
+								</li>
+								<li>
+									<a href="<?php echo U('about/jiaru');?>">加入我们</a>
+								</li>
+								<li>
+									<a href="<?php echo U('about/hezuo');?>">商务合作</a>
+								</li>
+							</ul>
 						</li>
 
 						<li class="dropdown">
@@ -63,12 +74,12 @@
 	<!-- 内容头部 -->
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">关于我们
-				<small>about</small>
+			<h1 class="page-header">公司简介
+				<small></small>
 			</h1>
 			<ol class="breadcrumb">
 				<li><a href="index.html">首页</a></li>
-				<li class="active">关于我们</li>
+				<li class="active">公司简介</li>
 			</ol>
 		</div>
 	</div>
@@ -77,26 +88,20 @@
 
 	</div>
 	<!-- 内容身体 -->
-	<div class="row">
+	<div class="row">	
 		<div class="col-md-6">
-			<img class="img-responsive img-rounded" src="/Git/Public/images/about.jpg" ale="">
-		</div>
-		<div class="col-md-6">
-			<div style="margin-left:30px">
-			<h2>关于我们</h2>
-			<h4><p>深圳福田<br>华茂欣园,银杏阁6F<br></p></h4>
-				<div>
-					<p><i class="fa fa-phone"></i>
-						:0755-83775006
-					</p>
-					<p><i class="fa fa-envelope-o"></i>
-						:<a href="mailto:243504330@qq.com">wangjinbang@wangjinbang.com</a>
-					</p>
-					<p><i class="fa fa-clock-o"></i>
-						:Monday - Friday: 9:00 AM to 5:00 PM
-					</p>
-				</div>
-			</div>	
+			<h4><p>深圳市福田区 红荔西路华茂欣园,银杏阁6F<br></p></h4>
+			<div>
+				<p>联系电话</i>
+					:0755-83775006
+				</p>
+				<p>联系邮箱</i>
+					:<a href="mailto:243504330@qq.com">wangjinbang@wangjinbang.com</a>
+				</p>
+				<p>工作时间</i>
+					:Monday - Friday: 9:00 AM to 5:00 PM
+				</p>
+			</div>		
 		</div>
 	</div>
 	<!-- 我们介绍 -->
@@ -119,32 +124,32 @@
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/Git/Public/images/home1.jpg" alt="">
+				<img class="img-responsive" src="/git/Public/images/home1.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/Git/Public/images/home2.jpg" alt="">
+				<img class="img-responsive" src="/git/Public/images/home2.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/Git/Public/images/home3.jpg" alt="">
+				<img class="img-responsive" src="/git/Public/images/home3.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/Git/Public/images/home4.jpg" alt="">
+				<img class="img-responsive" src="/git/Public/images/home4.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/Git/Public/images/food1.jpg" alt="">
+				<img class="img-responsive" src="/git/Public/images/food1.jpg" alt="">
 			</div>
 		</div>
 		<div class="col-md-4 text-center">
 			<div class="thumbnail">
-				<img class="img-responsive" src="/Git/Public/images/home6.jpg" alt="">
+				<img class="img-responsive" src="/git/Public/images/home6.jpg" alt="">
 			</div>
 		</div>
 	</div>	
@@ -155,22 +160,22 @@
 			<h2 class="page-header">合作伙伴</h2>
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="/Git/Public/images/huoban1.png" alt="">
+			<img class="img-responsive customer-img" src="/git/Public/images/huoban1.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="/Git/Public/images/huoban2.png" alt="">
+			<img class="img-responsive customer-img" src="/git/Public/images/huoban2.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="/Git/Public/images/huoban3.png" alt="">
+			<img class="img-responsive customer-img" src="/git/Public/images/huoban3.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="/Git/Public/images/huoban4.png" alt="">
+			<img class="img-responsive customer-img" src="/git/Public/images/huoban4.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="/Git/Public/images/huoban5.png" alt="">
+			<img class="img-responsive customer-img" src="/git/Public/images/huoban5.png" alt="">
 		</div>
 		<div class="col-md-2 col-sm-4 col-xs-6">
-			<img class="img-responsive customer-img" src="/Git/Public/images/huoban6.png" alt="">
+			<img class="img-responsive customer-img" src="/git/Public/images/huoban6.png" alt="">
 		</div>
 		
 
@@ -190,8 +195,8 @@
 
 </div>
 
-<script src="/Git/Public/js/jquery.js"></script>
-<script src="/Git/Public/js/bootstrap.min.js"></script>
+<script src="/git/Public/js/jquery.js"></script>
+<script src="/git/Public/js/bootstrap.min.js"></script>
 <script>
 $('.carousel').carousel({
 	interval:5000

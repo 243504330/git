@@ -28,8 +28,19 @@
 				<!--其他链接 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="<?php echo U('about/index');?>">关于我们</a>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我们<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="<?php echo U('about/index');?>">公司简介</a>
+								</li>
+								<li>
+									<a href="<?php echo U('about/jiaru');?>">加入我们</a>
+								</li>
+								<li>
+									<a href="<?php echo U('about/hezuo');?>">商务合作</a>
+								</li>
+							</ul>
 						</li>
 
 						<li class="dropdown">

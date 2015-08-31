@@ -69,67 +69,36 @@
 		</nav>
 <!--  导航结束 -->
 
-	<!-- 内容 -->
-	<div class="container">
-	<!-- 内容头开始 -->
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header">创业沙龙
-					<small>交流交流</small>
-				</h1>
-				<ol class="breadcrumb">
-					<li><a href="index.html">首页</a></li>
-					<li class="active">创业沙龙</li>
-				</ol>
-			</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">商业合作<small></small>
 		</div>
-	<!-- 内容头结束 -->
-	<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><!-- 创业沙龙例子 -->
-		<div class="row">
-			<div class="col-md-7">
-				<a href="<?php echo U('salon/salon',array('id'=>$arr['id']));?>">
-					<img class="img-responsive img-hover" src="/git/Public/images/<?php echo ($arr["img"]); ?> "ale="">
-				</a>
+		<ol class="breadcrumb">
+			<li><a href="index.html">首页</a></li>
+			<li class="active">商业合作</li>
+		</ol>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h4><p>我们可以为您做什么?<br></p></h4>
+			
+			<div>
+				提供定制各种线下活动。从2015年起,我们携手多家业内知名机构,邀请互联网界内知名人士,举办过多场互联网金融沙龙活动。
 			</div>
-			<div class="col-md-5">
-				<h3><?php echo ($arr["title"]); ?></h3>
-				<h4>出席嘉宾:</h4>
-				<p>
-				<ul>
-					<?php echo ($arr["compere"]); ?>
-				</ul>
-				<h4>出席企业:</h4>
-				
-				<ul>
-					
-					<?php echo ($arr["guest"]); ?>
-				</ul>
-				</p>
-				<a class="btn btn-primary" href="<?php echo U('salon/salon',array('id'=>$arr['id']));?>">进入看详情</i></a>
+			<br>
+			<h4><p>参加我们的节目?<br></p></h4>
+			<div>
+				参与节目录制的嘉宾均邀请知名互联网金融行业领军人物、行业内杰出的代表人物及业内专家学者参与录制,为节目质量奠定了良好的基础。
 			</div>
+			<br>
+			<h4><p>商业推广?<br></p></h4>
+
 		</div>
 
-		<hr><?php endforeach; endif; else: echo "" ;endif; ?>
-		<!-- 例子 end-->
+	</div>
 
-		<hr>
-		<!-- 临时分页 -->
-		<div class="row text-center">
-			<div class="col-lg-12">
-				<ul class="pagination">
-					<li>
-						<a href="#">&laquo;</a>
-					</li>
-					<li class="active">
-						<a href="#">1</a>
-					</li>
-					<li>
-						<a href="#">&raquo;</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- 临时分页end -->
 
 
 	<hr>

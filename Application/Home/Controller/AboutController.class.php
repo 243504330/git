@@ -6,4 +6,8 @@ class AboutController extends Controller{
 		$this->display();
 	
 	}
+
+	public function hezuo(){
+		$this->display();
+	}
 }
