@@ -1,14 +1,27 @@
+<script src="/git/Public/js/jquery.js"></script>
+<script>
+$(function(){
+	$("button").click(function(){
+		$.ajax({
+			url:"{:U('index/demo')}",
+			type:"POST",
+			data:{id:$("#id").val(),email:$("#email").val(),pwd:$("#pwd").val()},
+			success:function(){
+				document.write('aaa');
+			},
+			error:function(){
+				alert("222");
+			}
+		})
+	})
+})
+</script>
 
+<form class="form-horizontal" method="post">		
 	<div class="span9">
-					<div class="hero-unit">
-						<h1>
-							这是后台！
-						</h1>
-						<p>
-							嗯~
-						</p>
-						<p>
-							<a class="btn btn-primary btn-large" href="#">哦</a>
-						</p>
-					</div>
+		<span>ID</span><input type="text" name="id" id="id">
+		<span>邮箱</span><input type="text" name="email" id="email">
+		<span>密码</span><input type="password" name="pwd" id="pwd">
+		<button class="btn btn-success" id="gogo">登录</button>
 	</div>
+</form>

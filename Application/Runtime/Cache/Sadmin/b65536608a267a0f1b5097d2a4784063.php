@@ -28,32 +28,6 @@
 			</div>
 			
 	
-			<div class="view">
-                <div class="row-fluid clearfix">
-                  <div class="span12 column ui-sortable"><div class="box box-element ui-draggable" style="display: block; position: relative; opacity: 1; z-index: 0;"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
-              <div class="preview">遮罩窗体</div>
-              <div class="view"> 
-                <!-- Button to trigger modal --> 
-                <a id="modal-576123" href="#modal-container-576123" role="button" class="btn" data-toggle="modal" contenteditable="true">触发遮罩窗体</a> 
-                
-                <!-- Modal -->
-                <div id="modal-container-576123" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h3 id="myModalLabel" contenteditable="true">标题栏</h3>
-                  </div>
-                  <div class="modal-body">
-                    <p contenteditable="true">显示信息</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true" contenteditable="true">关闭</button>
-                    <button class="btn btn-primary" contenteditable="true">保存设置</button>
-                  </div>
-                </div>
-              </div>
-            </div></div>
-                </div>
-              </div>
 	
 
 
@@ -79,20 +53,34 @@
 						</li>
 					</ul>
 				</div>
-				
+				<script src="/git/Public/js/jquery.js"></script>
+<script>
+$(function(){
+	$("button").click(function(){
+		$.ajax({
+			url:"<?php echo U('index/demo');?>",
+			type:"POST",
+			data:{id:$("#id").val(),email:$("#email").val(),pwd:$("#pwd").val()},
+			success:function(){
+				document.write('aaa');
+			},
+			error:function(){
+				alert("222");
+			}
+		})
+	})
+})
+</script>
+
+<form class="form-horizontal" method="post">		
 	<div class="span9">
-					<div class="hero-unit">
-						<h1>
-							这是后台！
-						</h1>
-						<p>
-							嗯~
-						</p>
-						<p>
-							<a class="btn btn-primary btn-large" href="#">哦</a>
-						</p>
-					</div>
+		<span>ID</span><input type="text" name="id" id="id">
+		<span>邮箱</span><input type="text" name="email" id="email">
+		<span>密码</span><input type="password" name="pwd" id="pwd">
+		<button class="btn btn-success" id="gogo">登录</button>
 	</div>
+</form>
+
 				
 			</div>
 		</div>

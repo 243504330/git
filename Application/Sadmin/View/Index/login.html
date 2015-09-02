@@ -1,1 +1,16 @@
-{__NOLAYOUT__}
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		type:"POST",
+		url:"http://localhost/git/index.php/Sadmin/index/login",
+		dataType:"json",
+		success:function(data){
+			alert(data);
+		}
+	})
+
+</script>
+<form action="" methon="post">
+	<input type="text" class="" name="email">
+	<inpit type="password" class="" name="pwd">
+</form>

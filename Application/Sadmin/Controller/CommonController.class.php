@@ -7,11 +7,11 @@ class CommonController extends Controller{
 	const ERR = 800000;
 	const FOO = "参数不能为空";
 
-	public function _initialize(){
-		echo '------------------测试-------------------';
-		echo '<br/>';
+	/*public function _initialize(){
 		
-	}
+
+		
+	}*/
 
 	protected function param_isset($method,$fields){
 		

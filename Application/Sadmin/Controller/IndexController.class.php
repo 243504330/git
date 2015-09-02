@@ -15,37 +15,27 @@ class IndexController extends CommonController{
     	//redirect($sdk->getRequestCodeURL());
     	//$this->display();
     	//$this->param_isset('POST',array('email','pwd'));
-        $_POST['id'] = '1';
-        $_POST['email'] = '243504330@qq.com';
-        $_POST['pwd'] = 'cs1234';
-      
         $this->param_isset('POST',array('id','email','pwd'));
-
-       
-        $pwd['id'] = 'sdsssss';
+     
+        $pwd['id'] = Filter::get_str($_POST['id']);
         $pwd['pwd'] = Filter::get_str($_POST['pwd']);
         $pwd['pwd'] = Filter::get_salt_pwd($pwd['pwd']);
-        
-
+        $pwd['email']=Filter::get_str($_POST['email']);
         $this->check_param($pwd);
-
-        $arr = D('user')->login($pwd);
-        
+        $arr = D('user')->login($pwd);      
         $data['info'] = 'SUCCESS';
-        $this->ajaxReturn($data);
-
-           
-        
-           
-        
-           
+        $this->ajaxReturn($data);   	
        
-    	
-    	
 
     }
 
     public function demo(){
-    	dump(Filter::get_str('a<script>sd22a/,</script>sd'));
+        //dump($_POST);
+       
+        $this->param_isset('POST',array('id','email','pwd','sd'));
+    	$data = $_POST;
+     
+        $this->ajaxReturn($data);
     }
+   
 }
