@@ -17,7 +17,7 @@ class CommonController extends Controller{
 		
 		if(empty($fields)){
 			$data['info'] = 'const is empty';
-			$data['error'] = self::ERR+__LINE__;
+			$data['status'] = self::ERR+__LINE__;
 			$this->ajaxReturn($data);
 		}
 
@@ -30,7 +30,7 @@ class CommonController extends Controller{
 			
 			if(!isset($temp[$v])){
 				$data['info'] = 'lost the ->'.$v;
-				$data['error']	= self::ERR + __LINE__;	
+				$data['status']	= self::ERR + __LINE__;	
 				$this->ajaxReturn($data);
 			}
 		}
@@ -41,10 +41,22 @@ class CommonController extends Controller{
 	protected function check_param($param){
 		if(isset($param['id'])){
 			if(strlen($param['id'])>18){
-				$data['info'] = 'to long' ;
+				$data['info'] = 'to long';
+				$data['status'] = self::ERR + __LINE__;
 				$this->ajaxReturn($data);
 			}			
 		}
+
+		if(empty($param['id'])){
+			$data['info'] = 'id is empty';
+			$data['status'] = self::ERR + __LINE__;
+			$this->ajaxReturn($data);
+		}
 		return true;
 	}
+
+
+
+
+
 }

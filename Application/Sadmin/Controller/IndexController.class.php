@@ -31,11 +31,17 @@ class IndexController extends CommonController{
 
     public function demo(){
         //dump($_POST);
-       
-        $this->param_isset('POST',array('id','email','pwd','sd'));
-    	$data = $_POST;
-     
+        //echo "hellow ordl";
+
+         $this->param_isset('POST',array('id','email','pwd'));
+         $data['id'] = Filter::get_str($_POST['id']);
+    	 $data['pwd'] = Filter::get_str($_POST['pwd']);
+         $data['pwd'] = Filter::get_salt_pwd($data['pwd']);
+         $data['email'] = Filter::get_str($_POST['email']);
+         $this->check_param($data);
+         $data['status'] = 0;
         $this->ajaxReturn($data);
+         
     }
    
 }

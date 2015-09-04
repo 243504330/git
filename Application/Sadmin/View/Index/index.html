@@ -3,25 +3,32 @@
 $(function(){
 	$("button").click(function(){
 		$.ajax({
-			url:"{:U('index/demo')}",
+			url:"/git/index.php/Sadmin/index/demo",
 			type:"POST",
 			data:{id:$("#id").val(),email:$("#email").val(),pwd:$("#pwd").val()},
-			success:function(){
-				document.write('aaa');
+			success:function(data){
+				if(data.status == 0){
+					$("#sv").append(data.email);
+				}else{
+					alert(data.status);
+					alert(data.info);
+				}
 			},
 			error:function(){
-				alert("222");
+				alert("致命错误");
 			}
 		})
 	})
 })
 </script>
 
-<form class="form-horizontal" method="post">		
+	
 	<div class="span9">
 		<span>ID</span><input type="text" name="id" id="id">
 		<span>邮箱</span><input type="text" name="email" id="email">
 		<span>密码</span><input type="password" name="pwd" id="pwd">
 		<button class="btn btn-success" id="gogo">登录</button>
+		
 	</div>
-</form>
+
+<div id="sv">3323</div>
