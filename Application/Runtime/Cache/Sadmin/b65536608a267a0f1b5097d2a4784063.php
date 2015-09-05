@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -6,100 +7,90 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>公司主页3</title>
+	<title>登录</title>
 	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/git/Public/css/modern-business.css" rel="stylesheet">
-    <link href="/git/Public/css/editor.css" rel="stylesheet">
-    <link href="http://www.bootcss.com/p/layoutit/css/bootstrap-combined.min.css" rel="stylesheet">
-	<link href="http://www.bootcss.com/p/layoutit/css/layoutit.css" rel="stylesheet">
-    <link href="/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<script src="/git/Public/js/jquery.js"></script>
+	<script>
+		$(function(){
+			$("button").click(function(){
+				$.ajax({
+					url:"/git/index.php/Sadmin/index/demo",
+					type:"POST",
+					data:{email:$("#email").val(),pwd:$("#pwd").val()},
+					success:function(data){
+						if(data.status == 0){
+							$("#sv").text("登录成功,即将跳转");
+						}else{
+							$("#sv").append(data.info);
+							
+											
+						}
+					},
+					error:function(){
+						alert("致命错误");
+					}
+				})
+			})
+		})
+	</script>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				
+			})
+		})
+	</script>
 </head>
 <body>
-
-
-<div class="container-fluid">
+	<div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span12">
-			<div class="alert alert-error">
-				 <button type="button" class="close" data-dismiss="alert">×</button>
-				<h4>
-					提示!
-				</h4> <strong>警告!</strong> 请注意你的个人隐私安全.
-			</div>
-			
-	
-	
+		<div class="span4" style="margin-top:10%">
+		</div>
+		<div class="span4" style="margin-left:40%">
 
+    <fieldset>
+      <div class="">
+        <label class="control-label" >登录</label><p class="help-block" id="sv"></p>
+      </div>
+    
+    <div class="control-group">
 
-			<div class="row-fluid">
-				<div class="span3">
-					<ul class="nav nav-list">
-						<li class="nav-header">
-							列表标题
-						</li>
-						<li class="active">
-							<a href="<?php echo U('salon/index');?>">沙龙首页列表</a>
-						</li>
-						<li>
-							<a href="#"></a>
-						</li>
-						<li>
-							<a href="#">应用</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">帮助</a>
-						</li>
-					</ul>
-				</div>
-				<script src="/git/Public/js/jquery.js"></script>
-<script>
-$(function(){
-	$("button").click(function(){
-		$.ajax({
-			url:"/git/index.php/Sadmin/index/demo",
-			type:"POST",
-			data:{id:$("#id").val(),email:$("#email").val(),pwd:$("#pwd").val()},
-			success:function(data){
-				if(data.status == 0){
-					$("#sv").append(data.email);
-				}else{
-					alert(data.status);
-					alert(data.info);
-				}
-			},
-			error:function(){
-				alert("致命错误");
-			}
-		})
-	})
-})
-</script>
+          <!-- Text input-->
+          <label class="control-label" for="input01" >帐号</label>
+          <div class="controls">
+            <input type="text" placeholder="" name="email" id="email"  class="input-xlarge">
+            <p class="help-block"></p>
+          </div>
+        </div>
 
-	
-	<div class="span9">
-		<span>ID</span><input type="text" name="id" id="id">
-		<span>邮箱</span><input type="text" name="email" id="email">
-		<span>密码</span><input type="password" name="pwd" id="pwd">
-		<button class="btn btn-success" id="gogo">登录</button>
-		
-	</div>
+    <div class="control-group">
 
-<div id="sv">3323</div>
+          <!-- Text input-->
+          <label class="control-label" for="input01" >密码</label>
+          <div class="controls">
+            <input type="password" placeholder="" class="input-xlarge" name="pwd"  id="pwd">
+            
+          </div>
+        </div>
 
-				
-			</div>
+ 
+    <div class="control-group">
+          <label class="control-label"></label>
+
+          <!-- Button -->
+          <div class="controls">
+            <button class="btn btn-default">登录</button>
+          </div>
+        </div>
+
+    </fieldset>
+
+		</div>
+		<div class="span4">
 		</div>
 	</div>
 </div>
-
-
-
-<script src="/git/Public/js/jquery.js"></script>
-<script src="/git/Public/js/bootstrap.min.js"></script>
-
-
-
+  <script src="/git/Public/js/bootstrap.min.js"></script>
 </body>
 </html>

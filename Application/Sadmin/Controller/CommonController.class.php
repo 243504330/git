@@ -16,7 +16,7 @@ class CommonController extends Controller{
 	protected function param_isset($method,$fields){
 		
 		if(empty($fields)){
-			$data['info'] = 'const is empty';
+			$data['info'] = '内容不能为空';
 			$data['status'] = self::ERR+__LINE__;
 			$this->ajaxReturn($data);
 		}
@@ -29,7 +29,7 @@ class CommonController extends Controller{
 		foreach($fields as $v){
 			
 			if(!isset($temp[$v])){
-				$data['info'] = 'lost the ->'.$v;
+				$data['info'] = '缺少参数---'.$v;
 				$data['status']	= self::ERR + __LINE__;	
 				$this->ajaxReturn($data);
 			}
@@ -39,16 +39,15 @@ class CommonController extends Controller{
 	}
 
 	protected function check_param($param){
-		if(isset($param['id'])){
+		/*if(isset($param['id'])){
 			if(strlen($param['id'])>18){
-				$data['info'] = 'to long';
+				$data['info'] = 'id太长了';
 				$data['status'] = self::ERR + __LINE__;
 				$this->ajaxReturn($data);
 			}			
-		}
-
-		if(empty($param['id'])){
-			$data['info'] = 'id is empty';
+		}*/
+		if(strlen($param['email']) ==0 ){
+			$data['info'] = '邮箱或密码不能为空';
 			$data['status'] = self::ERR + __LINE__;
 			$this->ajaxReturn($data);
 		}

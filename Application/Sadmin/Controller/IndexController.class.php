@@ -33,7 +33,7 @@ class IndexController extends CommonController{
         //dump($_POST);
         //echo "hellow ordl";
 
-         $this->param_isset('POST',array('id','email','pwd'));
+         $this->param_isset('POST',array('email','pwd'));
          $data['id'] = Filter::get_str($_POST['id']);
     	 $data['pwd'] = Filter::get_str($_POST['pwd']);
          $data['pwd'] = Filter::get_salt_pwd($data['pwd']);
