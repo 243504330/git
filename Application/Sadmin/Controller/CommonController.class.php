@@ -16,9 +16,7 @@ class CommonController extends Controller{
 	protected function param_isset($method,$fields){
 		
 		if(empty($fields)){
-			$data['info'] = '内容不能为空';
-			$data['status'] = self::ERR+__LINE__;
-			$this->ajaxReturn($data);
+			return true;
 		}
 
 		$temp = $method == 'POST' ? $_POST : $_GET;
