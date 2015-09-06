@@ -27,8 +27,7 @@ class UserModel extends Model {
 		if($pwd['pwd'] != $arr['pwd']){
 			return false;
 		}
-
-		return true;
+			return true;
 	}
 
 	static function check_param($param){

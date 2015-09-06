@@ -8,25 +8,45 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>登录</title>
-	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/git/git/Public/css/bootstrap.min.css" rel="stylesheet">
 	
-	<script src="/git/Public/js/jquery.js"></script>
-	<script src="/git/Public/js/jquery.validate.js"></script>
-	<script src="/git/Public/js/jquery-form.js"></script>
+	<script src="/git/git/Public/js/jquery.js"></script>
+	<script src="/git/git/Public/js/jquery.validate.js"></script>
+	<script src="/git/git/Public/js/jquery-form.js"></script>
+	<!--<script>
+		$(function(){
+			$("#put").click(function(){
+				$.ajax({
+					url:"/git/git/index.php/Sadmin/index/demo",
+					type:"POST",
+					data:{email:$("#email").val(),pwd:$("#pwd").val()}
+					success:function(data){
+						if(data.status == 0){
+							alert("success");
+						}else{
+							alert("error");
+							
+											
+						}
+					},
+					error:function(){
+						document.write("332");
+				})
+			})
+		})
+	</script>-->
 	<script>
 		$(function(){
-			$("input:submit").click(function(){
+			$("#put").click(function(){
 				$.ajax({
-					url:"/git/index.php/Sadmin/index/demo",
+					url:"/git/git/index.php/Sadmin/index/demo",
 					type:"POST",
 					data:{email:$("#email").val(),pwd:$("#pwd").val()},
 					success:function(data){
 						if(data.status == 0){
-							window.location.href="demo";
+							alert(data.status);
 						}else{
-							$("#sv").append(data.info);
-							
-											
+							alert(data.status);
 						}
 					},
 					error:function(){
@@ -36,7 +56,6 @@
 			})
 		})
 	</script>
-
 </head>
 <body>
 	<div class="container-fluid">
@@ -77,7 +96,7 @@
 
           <!-- Button -->
           <div class="controls">
-            <input type="submit" value="登录" ><input type="reset" value="重置" id="reset">
+            <input type="submit" value="登陆" id="put">
           </div>
         </div>
 
@@ -88,6 +107,6 @@
 		</div>
 	</div>
 </div>
-  <script src="/git/Public/js/bootstrap.min.js"></script>
+  <script src="/git/git/Public/js/bootstrap.min.js"></script>
 </body>
 </html>
