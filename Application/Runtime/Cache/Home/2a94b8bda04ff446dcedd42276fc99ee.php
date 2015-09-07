@@ -7,9 +7,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>公司主页3</title>
-	<link href="/git/git/Public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/git/git/Public/css/modern-business.css" rel="stylesheet">
-    <link href="/git/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/git/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/git/Public/css/modern-business.css" rel="stylesheet">
+    <link href="/git/Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>	
@@ -80,19 +80,19 @@
 <!-- 滚动包装 -->
 <div class="carousel-inner">
 	<div class="item active">
-		<div class="fill" style="background-image:url('/git/git/Public/images/bs.jpg');"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/bs.jpg');"></div>
 		<div class="carousel-caption">
 			<h2></h2>
 		</div>
 	</div>
 	<div class="item">
-		<div class="fill" style="background-image:url('/git/git/Public/images/index2.jpg')"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/index2.jpg')"></div>
 		<div class="carousel-caption">
 			<h2></h2>
 		</div>
 	</div>
 	<div class="item">
-		<div class="fill" style="background-image:url('/git/git/Public/images/index3.jpg')"></div>
+		<div class="fill" style="background-image:url('/git/Public/images/index3.jpg')"></div>
 		<div class="carousel-caption">
 			<h2></h2>
 		</div>
@@ -116,11 +116,9 @@
 	<!-- 图标项目 -->
 	<div class="row">
 		<div class="col-lg-12">		
-			<h1 class="page-header">
-				<div class="second">
-					我们专注<strong style="color:rgb(234, 196, 98)">互联网金融</strong>100年
-				</div>
-			</h1>
+			<h2 class="page-header">公司产品
+				<small><a href="<?php echo U('about/index');?>" style="color:#BDBDBD"></a></small>
+			</h2>
 			
 		</div>
 
@@ -128,11 +126,11 @@
 		<div class="col-md-12">
 
 			<div class="second-one">
-				<a href="#" ><img src="/git/git/Public/images/lanmu.jpg" style="width:198px;height:178px" class="img-rounded"></a>
+				<a href="#" ><img src="/git/Public/images/lanmu.jpg" style="width:198px;height:178px" class="img-rounded"></a>
 			</div>
 
 			<div class="second-one" style="margin: 0 20px 0 250px;">
-				<a href="../../wangjinbang.com" target="view_window"><img src="/git/git/Public/images/wjb.jpg" style="width:198px;height:178px" class=""></a>
+				<a href="../../wangjinbang.com" target="view_window"><img src="/git/Public/images/wjb.jpg" style="width:198px;height:178px" class=""></a>
 			</div>
 
 		
@@ -151,22 +149,22 @@
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/git/git/Public/images/home1.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home1.jpg" ale="">
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/git/git/Public/images/home2.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home2.jpg" ale="">
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/git/git/Public/images/home3.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/home3.jpg" ale="">
 			</a>
 		</div>
 		<div class="col-md-4 col-sm-6">
 			<a href="#">
-				<img class="img-responsive img-portfolio img-hover" src="/git/git/Public/images/homee.jpg" ale="">
+				<img class="img-responsive img-portfolio img-hover" src="/git/Public/images/homee.jpg" ale="">
 			</a>
 		</div>
 		
@@ -175,7 +173,9 @@
 	<!-- 公司特点等 -->
 	<div class="row">
 		<div class="col-lg--12">
-			<h2 class="page-header">栏目简介</h2>
+			<h2 class="page-header">栏目简介
+				<small><a href="http://i.youku.com/u/UMjg5NTc1NDI2OA==/videos" target="_blank" style="color:#BDBDBD">观看节目</a></small>
+			</h2>
 		</div>	
 		<div class="col-md-6">
 			<p><strong>时代背景</strong></p>
@@ -205,7 +205,7 @@
 			</ul>
 		</div>
 		<div class="col-md-6">
-			<img class="img-responsive" src="/git/git/Public/images/lanmu.jpg" ale="">
+			<a href="http://i.youku.com/u/UMjg5NTc1NDI2OA==/videos"><img class="img-responsive" src="/git/Public/images/lanmu.jpg" ale=""></a>
 		</div>
 	</div>
 	<!-- 结束 -->
@@ -232,8 +232,8 @@
 									<h4 class="modal-title" id="myModalLabel">标题</h4>
 								</div>
 								<div class="modal-body" style="margin-left:45px">
-									<img src="/git/git/Public/images/jr.png">
-									<img src="/git/git/Public/images/jb.png" style="margin-left:50px">
+									<img src="/git/Public/images/jr.png">
+									<img src="/git/Public/images/jb.png" style="margin-left:50px">
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
@@ -261,8 +261,8 @@
 
 </div>
 
-<script src="/git/git/Public/js/jquery.js"></script>
-<script src="/git/git/Public/js/bootstrap.min.js"></script>
+<script src="/git/Public/js/jquery.js"></script>
+<script src="/git/Public/js/bootstrap.min.js"></script>
 <script>
 $('.carousel').carousel({
 	interval:5000

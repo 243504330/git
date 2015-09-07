@@ -13,8 +13,8 @@ class UserModel extends Model {
 		return $this;
 	}
 
-	public function get_info_by_email($email){
-		$re = M('user')->where(array('eamil'=>$email))->select();
+	public function get_info_by_email($data){
+		$re = M('user')->where(array('email'=>$data['email']))->select();
 		if(empty($re)){
 			return false;
 		}else{
@@ -22,11 +22,12 @@ class UserModel extends Model {
 		}
 	}
 
-	public function login($pwd){
-		$arr = $this->get_info_by_email();
-		if($pwd['pwd'] != $arr['pwd']){
+	public function login($data){
+		$arr = $this->get_info_by_email($data);
+		if($data['pwd'] != $arr['pwd']){
 			return false;
 		}
+			session('email',$arr['email']);
 			return true;
 	}
 
