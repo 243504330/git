@@ -97,7 +97,7 @@
 
           <!-- Button -->
           <div class="controls">
-            <input type="submit" value="登陆" id="put">
+            <input type="button" value="登陆" id="put">
           </div>
         </div>
 

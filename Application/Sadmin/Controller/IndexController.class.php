@@ -39,19 +39,24 @@ class IndexController extends CommonController{
 
     }
 
-    public function demo(){
-        
+    public function login(){
+        //参数检查
         $this->param_isset('POST',array('email','pwd'));
+        //参数过滤
     	$data['pwd'] = Filter::get_str($_POST['pwd']); 
         $data['email'] = Filter::get_str($_POST['email']);
+        //参数检查
         $this->check_param($data);
+        //密码加密
         $data['pwd'] = Filter::get_salt_pwd($data['pwd']);  
+        //验证资料
         $info = D('user')->login($data);
         if($info === false){
             $data['status'] = self::ERR + __LINE__;
             $data['info'] = "帐号或密码错误";
             $this->ajaxReturn($data);
         }
+        //成功！
         $data['status'] = 0;
         $data['info'] ="登录成功,执行跳转";
         $this->ajaxReturn($data);

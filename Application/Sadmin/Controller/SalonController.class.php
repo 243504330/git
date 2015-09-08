@@ -1,7 +1,7 @@
 <?php
 namespace Sadmin\Controller;
 use Think\Controller;
-class SalonController extends Controller {
+class SalonController extends LoginController {
     public function index(){
     	$model = M('salon');
     	$data = $model->select();

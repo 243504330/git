@@ -54,31 +54,40 @@
 					</ul>
 				</div>
 				
-<div class="span9">
-	<table class="table table-hover">
-		<thead>
-			<tr>
-				<th>id</th>
-				<th>标题</th>
-			
-				<th>首页操作</th>
-				<th>详情页操作</th>
-				<th>相关图片操作</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr class="warning">
-				
-				<td><?php echo ($v["id"]); ?></td>
-				<td><?php echo ($v["title"]); ?></td>
-				
-				<td><a href="<?php echo U('salon/edite',array('id'=>$v['id']));?>">编辑</a>/<a href="#">删除</a></td>
-				<td><a href="<?php echo U('salon/details',array('id'=>$v['id']));?>">编辑</a>/<a href="#">删除</a></td>
-				<td><a href="<?php echo U('img/index',array('id'=>$v['id']));?>">增加</a>/<a href="<?php echo U('salon/simg',array('id'=>$v['id']));?>">编辑</a></td>
-			</tr><?php endforeach; endif; else: echo "" ;endif; ?>				
-		</tbody>
-	</table>
+
+<div class="row" id="details">
+	
+
+
 </div>
+<script src="/git/Public/js/jquery.js"></script>
+<script>
+	$(function(){
+		var sid = "<?php echo ($_GET['id']); ?>";
+		$.ajax({
+			url:"/git/index.php/Sadmin/img/imgs/id/"+sid,
+			type:"GET",
+			success:function(data){		
+					for(var o in data){
+						var id = data[o].id;
+						var img = data[o].img;
+						var url = "/git/index.php/Sadmin/salon/del/id/"+id;
+						$("#details").append(
+							"<div class='col-md-4 col-sm-6' style='width:23.33333333333%'>" + 
+							"<p>" + id + "</p>"+
+							"<img class='img-responsive img-portfolio img-hover' src='/git/Public/images/" + img +"'ale=''>" +
+							"<a href='#'>修改</a><a href='"+url+"'>/删除</a>" +
+							"</div>"
+						);
+					}
+				
+			},
+			error:function(){
+				alert("致命错误");
+			}
+		});
+	});
+</script>
 
 				
 			</div>

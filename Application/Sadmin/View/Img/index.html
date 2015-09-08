@@ -1,0 +1,35 @@
+
+
+<div class="row" id="details">
+	
+
+
+</div>
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script>
+	$(function(){
+		var sid = "{$_GET['id']}";
+		$.ajax({
+			url:"__ROOT__/index.php/Sadmin/img/imgs/id/"+sid,
+			type:"GET",
+			success:function(data){		
+					for(var o in data){
+						var id = data[o].id;
+						var img = data[o].img;
+						var url = "__ROOT__/index.php/Sadmin/salon/del/id/"+id;
+						$("#details").append(
+							"<div class='col-md-4 col-sm-6' style='width:23.33333333333%'>" + 
+							"<p>" + id + "</p>"+
+							"<img class='img-responsive img-portfolio img-hover' src='__PUBLIC__/images/" + img +"'ale=''>" +
+							"<a href='#'>修改</a><a href='"+url+"'>/删除</a>" +
+							"</div>"
+						);
+					}
+				
+			},
+			error:function(){
+				alert("致命错误");
+			}
+		});
+	});
+</script>

@@ -4,7 +4,7 @@ use Think\Controller;
 class LoginController extends Controller{
 	public function _initialize(){
 		if(!isset($_SESSION['email'])){
-			echo 'rong';
+			$this->redirect('Sadmin/index/index');
 		}
 		echo $_SESSION['email'];
 	}

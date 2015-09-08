@@ -1,13 +1,9 @@
 <?php
-namespace Admin\Model;
-use Think\Model\RelationModel;
-class SalonModel extends RelationModel{
-	protected $_link = array(
-		'guest'=>array(
-			'mapping_type'=>self::HAS_MANY,
-			//'class_name'=>'guest',
-			'foreign_key'=>'sid',
-			'mapping_name'=>'person',
-		),	
-	);
+namespace Sadmin\Model;
+use Think\Model;
+class SalonModel extends Model{
+	public function img_select($id){
+		$data = M('simg')->where('sid=%d',$id)->select();
+		return $data;
+	}
 }

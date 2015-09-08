@@ -1,0 +1,96 @@
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/xc4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/xc5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/1439180885.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/xc6.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/xc7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/hd2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/1439180905.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/1439180861.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/1439180871.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T15:53:28+08:00 ] 127.0.0.1 /git/index.php/images/xc3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+ERR: 无法加载模块:Images
+
+[ 2015-09-08T17:28:12+08:00 ] 127.0.0.1 /git/index.php/salon/del/id/26
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+ERR: 无法加载模块:Salon
+
+[ 2015-09-08T17:29:53+08:00 ] 127.0.0.1 /git/index.php/salon/del/id/26
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+ERR: 无法加载模块:Salon
+
+[ 2015-09-08T17:30:44+08:00 ] 127.0.0.1 /git/index.php/salon/del/id/26.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+ERR: 无法加载模块:Salon
+
+[ 2015-09-08T17:31:20+08:00 ] 127.0.0.1 /git/index.php/salon/del/id/26.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+ERR: 无法加载模块:Salon
+
+[ 2015-09-08T17:46:03+08:00 ] 127.0.0.1 /git/index.php/salon/del/id/27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+ERR: 无法加载模块:Salon
+
+[ 2015-09-08T17:46:20+08:00 ] 127.0.0.1 /git/index.php/salon/del/id/27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+ERR: 无法加载模块:Salon
+
