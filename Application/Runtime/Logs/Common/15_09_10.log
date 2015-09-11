@@ -1,0 +1,24 @@
+[ 2015-09-10T10:43:51+08:00 ] 127.0.0.1 /git/index.php/imgs/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-09-10T12:20:23+08:00 ] 127.0.0.1 /git/index.php/imgs/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-09-10T12:20:38+08:00 ] 127.0.0.1 /git/index.php/imgs/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+ERR: 无法加载模块:Imgs
+
+[ 2015-09-10T12:21:29+08:00 ] 127.0.0.1 /git/index.php/imgs/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+ERR: 无法加载模块:Imgs
+

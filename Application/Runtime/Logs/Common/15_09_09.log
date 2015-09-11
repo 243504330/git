@@ -1,0 +1,66 @@
+[ 2015-09-09T10:42:17+08:00 ] 127.0.0.1 /git/index.php/xc3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+ERR: 无法加载模块:Xc3
+
+[ 2015-09-09T10:42:17+08:00 ] 127.0.0.1 /git/index.php/xc5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+ERR: 无法加载模块:Xc5
+
+[ 2015-09-09T10:42:17+08:00 ] 127.0.0.1 /git/index.php/xc7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+ERR: 无法加载模块:Xc7
+
+[ 2015-09-09T10:42:17+08:00 ] 127.0.0.1 /git/index.php/xc6.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+ERR: 无法加载模块:Xc6
+
+[ 2015-09-09T10:42:17+08:00 ] 127.0.0.1 /git/index.php/xc4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+ERR: 无法加载模块:Xc4
+
+[ 2015-09-09T10:56:39+08:00 ] 127.0.0.1 /git/index.php/public/images/1439180871.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-09T10:56:39+08:00 ] 127.0.0.1 /git/index.php/public/images/1439180905.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-09T10:56:39+08:00 ] 127.0.0.1 /git/index.php/public/images/1439180861.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-09T10:56:39+08:00 ] 127.0.0.1 /git/index.php/public/images/1439180885.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+ERR: 无法加载模块:Public
+
+[ 2015-09-09T15:09:06+08:00 ] 127.0.0.1 /git/index.php/img/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+ERR: 无法加载模块:Img
+
+[ 2015-09-09T15:10:06+08:00 ] 127.0.0.1 /git/index.php/img/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+ERR: 无法加载模块:Img
+

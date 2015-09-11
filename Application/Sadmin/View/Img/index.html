@@ -1,4 +1,7 @@
 
+<!--details(sid,p_url);-->
+<input type="button" id="dels" value="删除">
+<p id="iid"> </p>
 
 <div class="row" id="details">
 	
@@ -6,30 +9,53 @@
 
 </div>
 <script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__ROOT__/Application/Sadmin/js/controller.js"></script>
 <script>
-	$(function(){
-		var sid = "{$_GET['id']}";
+	var p_url = "__ROOT__";
+	var sid = "{$_GET['id']}";
+	$(function(){	
 		$.ajax({
-			url:"__ROOT__/index.php/Sadmin/img/imgs/id/"+sid,
+			url:"../../imgs/id/"+sid,
 			type:"GET",
 			success:function(data){		
-					for(var o in data){
-						var id = data[o].id;
-						var img = data[o].img;
-						var url = "__ROOT__/index.php/Sadmin/salon/del/id/"+id;
+				for(var i in data){
+						var id = data[i].id;
+						var img = data[i].img;
+						var url = p_url+"/index.php/Sadmin/img/del_img/id/"+id;
 						$("#details").append(
 							"<div class='col-md-4 col-sm-6' style='width:23.33333333333%'>" + 
 							"<p>" + id + "</p>"+
-							"<img class='img-responsive img-portfolio img-hover' src='__PUBLIC__/images/" + img +"'ale=''>" +
-							"<a href='#'>修改</a><a href='"+url+"'>/删除</a>" +
+							"<img class='img-responsive img-portfolio img-hover' src='"+p_url+"/public/images/" + img +"'ale=''>" +
+							"<a href='#'>修改</a><a href='javascript:void(0)' class='a_del' onclick='dele(this)' id='"+id+"'>/删除</a>" +
 							"</div>"
-						);
-					}
-				
+						);	
+				}	
+	
 			},
 			error:function(){
-				alert("致命错误");
+				alert("致命错误")
 			}
 		});
 	});
+</script>
+
+<script>
+	function dele(obj){
+		var id = $(obj).attr('id');
+		$.ajax({
+			type:"POST",
+			url:"/git/index.php/Sadmin/img/del_img/id/"+id,
+			dataType:"json",
+			success:function(data){
+				if(data.status === 0){
+					alert(data.info);
+				}else{
+					alert(data.status);
+				}
+			},
+			error:function(){
+				alert('致命错误');
+			}
+		})
+	}
 </script>

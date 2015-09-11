@@ -122,11 +122,11 @@ class SalonController extends LoginController {
     }
 
     public function del(){
-        $model = M('simg');
+        D('salon')->delete_img($_GET['id']);
+       
+    
 
-        $data = $model->where('id=%d',$_GET['id'])->delete();
-
-        if($data){
+       /* if($data){
             $info['status']=0;
             $info['msg']='修改成功';
             $info['content']=$data;
@@ -136,7 +136,7 @@ class SalonController extends LoginController {
             $info['msg']='修改失败';
         }
 
-        $json=$this->ajaxReturn($info,'JSON');
+        $this->ajaxReturn($info,'JSON');*/
        
 
     }

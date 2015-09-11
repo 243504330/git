@@ -5,7 +5,7 @@ use Org\ThinkSDK\ThinkOauth;
 use Org\Filter\Filter;
 
 class IndexController extends CommonController{
-   const ERR = 7000;
+   const ERR = 30000;
     public function index(){
 
     	
@@ -39,7 +39,7 @@ class IndexController extends CommonController{
 
     }
 
-    public function login(){
+    public function demo(){
         //参数检查
         $this->param_isset('POST',array('email','pwd'));
         //参数过滤

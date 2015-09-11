@@ -52,7 +52,28 @@ class CommonController extends Controller{
 		return true;
 	}
 
+	protected function upload_file(){
+		$upload = new \Org\Net\UploadFile();
 
+		$upload->maxSize = 3145728;
+			$upload->allowExts = array('jpg','gif','png','jpeg');
+			$upload->savePath = './Public/images/';
+
+			$upload->saveRule = time();
+			$result = $upload->upload();
+
+			if($result === false){
+				$data['info'] = "上传失败！！";
+				$data['status'] = self::ERR + __LINE__;
+				$this->ajaxReturn($data);
+			}
+			
+				$info = $upload->getUploadFileInfo();
+				$data = $info[0]['savename'];
+			
+			return $data;
+	
+	}
 
 
 

@@ -74,7 +74,7 @@
 				
 				<td><a href="<?php echo U('salon/edite',array('id'=>$v['id']));?>">编辑</a>/<a href="#">删除</a></td>
 				<td><a href="<?php echo U('salon/details',array('id'=>$v['id']));?>">编辑</a>/<a href="#">删除</a></td>
-				<td><a href="<?php echo U('img/index',array('id'=>$v['id']));?>">增加</a>/<a href="<?php echo U('salon/simg',array('id'=>$v['id']));?>">编辑</a></td>
+				<td><a href="<?php echo U('img/index',array('id'=>$v['id']));?>">增加</a>/<a href="<?php echo U('img/add_img',array('id'=>$v['id']));?>">编辑</a></td>
 			</tr><?php endforeach; endif; else: echo "" ;endif; ?>				
 		</tbody>
 	</table>

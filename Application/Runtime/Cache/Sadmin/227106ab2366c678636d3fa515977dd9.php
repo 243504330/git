@@ -53,67 +53,51 @@
 						</li>
 					</ul>
 				</div>
-				
-<!--details(sid,p_url);-->
-<input type="button" id="dels" value="删除">
-<p id="iid"> </p>
-
-<div class="row" id="details">
-	
-
-
-</div>
-<script src="/git/Public/js/jquery.js"></script>
-<script src="/git/Application/Sadmin/js/controller.js"></script>
+				<script src="/git/Public/js/jquery.js"></script>
+<script src="/git/Public/js/jquery-form.js"></script>
 <script>
-	var p_url = "/git";
 	var sid = "<?php echo ($_GET['id']); ?>";
-	$(function(){	
-		$.ajax({
-			url:"../../imgs/id/"+sid,
-			type:"GET",
-			success:function(data){		
-				for(var i in data){
-						var id = data[i].id;
-						var img = data[i].img;
-						var url = p_url+"/index.php/Sadmin/img/del_img/id/"+id;
-						$("#details").append(
-							"<div class='col-md-4 col-sm-6' style='width:23.33333333333%'>" + 
-							"<p>" + id + "</p>"+
-							"<img class='img-responsive img-portfolio img-hover' src='"+p_url+"/public/images/" + img +"'ale=''>" +
-							"<a href='#'>修改</a><a href='javascript:void(0)' class='a_del' onclick='dele(this)' id='"+id+"'>/删除</a>" +
-							"</div>"
-						);	
-				}	
-	
-			},
-			error:function(){
-				alert("致命错误")
-			}
-		});
-	});
+	$(function(){
+		$("#put").click(function(){
+			var formData = new FormData();
+			var img = $("#img");
+			formData.append("img",img[0].files[0]);
+			$.ajax({
+				url:"/git/index.php/Sadmin/img/add/id/"+sid,
+				type:"POST",
+				data:formData,sid,
+   				contentType: false,
+   				processData: false,
+				success:function(data){
+					if(data.status ==0){
+						alert(data.img);
+					}else{
+						$("#ji").append(data.status);
+					}
+				},
+				error:function(){
+					alert("致命错误");
+				}
+			})
+
+			//这个里的DEBUG流程，要学，别瞎跳，有逻辑，事半功倍。懂？要一步一步排除。好了，就这样把
+			//点击的时候，你没发现你的表单没提交了吗？是，所以你要return false把点击事件取消！ submit是会提交表单的，button不会，但是submit一样可以取消提交表单，具体怎么做，我忘记了，
+			//应该不是单独的return false，现在我们先用button代替
+			//点击没反映。第一步看Console，这里有个JS错误，所以要先解决JS错误
+			//js执行成公后，看网络请求
+			return false;
+		})
+	})
+
 </script>
 
-<script>
-	function dele(obj){
-		var id = $(obj).attr('id');
-		$.ajax({
-			type:"POST",
-			url:"/git/index.php/Sadmin/img/del_img/id/"+id,
-			dataType:"json",
-			success:function(data){
-				if(data.status === 0){
-					alert(data.info);
-				}else{
-					alert(data.status);
-				}
-			},
-			error:function(){
-				alert('致命错误');
-			}
-		})
-	}
-</script>
+<form class="form-horizontal" method="post"  action=" " enctype="multipart/form-data" id="myform">
+
+<input type="file" class="input-xlarge" name="img" id="img">
+
+<input type="button" value="保存" id="put"></input>
+</form>
+<div id="ji"></div>
 				
 			</div>
 		</div>

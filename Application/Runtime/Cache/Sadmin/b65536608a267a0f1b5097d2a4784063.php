@@ -13,49 +13,9 @@
 	<script src="/git/Public/js/jquery.js"></script>
 	<script src="/git/Public/js/jquery.validate.js"></script>
 	<script src="/git/Public/js/jquery-form.js"></script>
-	<!--<script>
-		$(function(){
-			$("#put").click(function(){
-				$.ajax({
-					url:"/git/git/index.php/Sadmin/index/demo",
-					type:"POST",
-					data:{email:$("#email").val(),pwd:$("#pwd").val()}
-					success:function(data){
-						if(data.status == 0){
-							alert("success");
-						}else{
-							alert("error");
-							
-											
-						}
-					},
-					error:function(){
-						document.write("332");
-				})
-			})
-		})
-	</script>-->
+	<script src="/git/Application/Sadmin/js/controller.js"></script>
 	<script>
-		$(function(){
-			$("#put").click(function(){
-				$.ajax({
-					url:"/git/index.php/Sadmin/index/demo",
-					type:"POST",
-					data:{email:$("#email").val(),pwd:$("#pwd").val()},
-					success:function(data){
-						if(data.status == 0){
-							window.location.href = "../user/index";
-						}else{
-							alert(data.status);
-							alert(data.info);
-						}
-					},
-					error:function(){
-						alert("致命错误");
-					}
-				})
-			})
-		})
+		login();
 	</script>
 </head>
 <body>
