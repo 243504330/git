@@ -11,18 +11,35 @@
 				<th>相关图片操作</th>
 			</tr>
 		</thead>
-		<tbody>
-			<volist name="data" id="v">
-			<tr class="warning">
-				
-				<td>{$v.id}</td>
-				<td>{$v.title}</td>
-				
-				<td><a href="{:U('salon/edite',array('id'=>$v['id']))}">编辑</a>/<a href="#">删除</a></td>
-				<td><a href="{:U('salon/details',array('id'=>$v['id']))}">编辑</a>/<a href="#">删除</a></td>
-				<td><a href="{:U('img/index',array('id'=>$v['id']))}">增加</a>/<a href="{:U('img/add_img',array('id'=>$v['id']))}">编辑</a></td>
-			</tr>	
-			</volist>				
+		<tbody id="tr">
+	
 		</tbody>
 	</table>
 </div>
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script>
+    var p_url="__ROOT__";
+	$(function(){
+		$.ajax({
+			url: "../Salon/index_data",
+			type:"POST",
+			success:function(data){
+				if(data.status == 0){
+					var data = data.data;
+					var url = p_url+"/index.php/Sadmin/";
+					$.each(data,function(i,obj){
+						$("#tr").append(
+							"<tr><class=''>"+
+							"<td>"+obj.id+"</td>"+
+							"<td>"+obj.title+"</td>"+
+							"<td><a href='"+url+"salon/edite/id/"+obj.id+"'>编辑/</a><a href='#'>删除</a></td>"+
+							"<td><a href='"+url+"salon/details/id/"+obj.id+"'>编辑/</a><a href='#'>删除</a></td>"+
+							"<td><a href='"+url+"img/add_img/id/"+obj.id+"'>增加/</a><a href='"+url+"img/index/id/"+obj.id+"'>编辑</a></td>"+
+							"</tr>"
+						)
+					})
+				}
+			}
+		})
+	})
+</script>

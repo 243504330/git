@@ -16,48 +16,16 @@
 </head>
 <body>
 
+							<a href="<?php echo U('salon/index');?>">沙龙首页列表</a>
+
 
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span12">
-			<div class="alert alert-error">
-				 <button type="button" class="close" data-dismiss="alert">×</button>
-				<h4>
-					提示!
-				</h4> <strong>警告!</strong> 请注意你的个人隐私安全.
-			</div>
-			
-	
-	
-
-
 			<div class="row-fluid">
-				<div class="span3">
-					<ul class="nav nav-list">
-						<li class="nav-header">
-							列表标题
-						</li>
-						<li class="active">
-							<a href="<?php echo U('salon/index');?>">沙龙首页列表</a>
-						</li>
-						<li>
-							<a href="#"></a>
-						</li>
-						<li>
-							<a href="#">应用</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">帮助</a>
-						</li>
-					</ul>
-				</div>
 				
-<!--details(sid,p_url);-->
-<input type="button" id="dels" value="删除">
-<p id="iid"> </p>
-
+				
+				
 <div class="row" id="details">
 	
 

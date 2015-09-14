@@ -1,23 +1,40 @@
 <?php
 namespace Sadmin\Controller;
 use Think\Controller;
-class SalonController extends LoginController {
+class SalonController extends CommonController {
     public function index(){
-    	$model = M('salon');
-    	$data = $model->select();
-    	$this->assign('data',$data);
     	$this->display();
+    }
+
+    public function index_data(){
+        $model = M('salon');
+        $arr = $model->select();
+        $data['data'] = $arr;
+        $data['status'] = 0;
+        $this->ajaxReturn($data);
+    }
+
+    public function edite_data(){
+        $this->display();
+    }
+
+    public function save_data(){
+        $data['img'] = $_POST['img'];
+        $data['title'] = $_POST['title'];
+        $this->ajaxReturn($data);
     }
 
     public function edite(){
     	
     		$model = M('salon');
 
-    		$profile = $model->where('id=%d',$_GET['id'])->find();
-    		$data=$_POST;
-    		dump($data);
+    		$profile = $model->where('id=%d',1)->find();
+    		$data['data'] = $profile;
+            $data['status'] = 0;
+            $this->ajaxReturn($data);
+    	
 
- 			$upload = new \Org\Net\UploadFile();
+ 		/*	$upload = new \Org\Net\UploadFile();
 
  			$upload->maxSize = 3145728;
  			$upload->allowExts = array('jpg','gif','png','jpeg');
@@ -27,8 +44,7 @@ class SalonController extends LoginController {
  			if($result){
  				$info = $upload->getUploadFileInfo();
  				$data['img']=$info[0]['savename'];
-              
- 				dump($data['img']);
+
 
  			}
 
@@ -40,7 +56,7 @@ class SalonController extends LoginController {
  				$this->success('OK');
  			}
  		 $this->assign('data',$profile);
-    	 $this->display();
+    	 $this->display();*/
     	
     }
 
