@@ -59,8 +59,8 @@
 							"<tr><class=''>"+
 							"<td>"+obj.id+"</td>"+
 							"<td>"+obj.title+"</td>"+
-							"<td><a href='"+url+"salon/edite/id/"+obj.id+"'>编辑/</a><a href='#'>删除</a></td>"+
-							"<td><a href='"+url+"salon/details/id/"+obj.id+"'>编辑/</a><a href='#'>删除</a></td>"+
+							"<td><a href='"+url+"salon/edite_data/id/"+obj.id+"'>编辑/</a><a href='#'>删除</a></td>"+
+							"<td><a href='"+url+"salon/details_data/id/"+obj.id+"'>编辑/</a><a href='#'>删除</a></td>"+
 							"<td><a href='"+url+"img/add_img/id/"+obj.id+"'>增加/</a><a href='"+url+"img/index/id/"+obj.id+"'>编辑</a></td>"+
 							"</tr>"
 						)

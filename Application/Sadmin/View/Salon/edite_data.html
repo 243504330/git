@@ -15,17 +15,19 @@
 							"<fieldset>"+
 
 							"<div id='legend' class=''><legend class=''>表单名"+data.id+"</legend></div>"+
-							"<div class='control-group'><label class='control-label' for='input01'>嘉宾</label><div class='controls'><div class='textarea'><textarea placeholder='' type='' class='' name='compere'>"+data.compere+"</textarea>"+
-							"</div><p class='help-block'></p></div></div>"+
 
-							"<div class='control-group'><label class='control-label' for='input01'>企业</label><div class='controls'><input type='text' placeholder='placeholder' class='input-xlarge' name='title' id='title' value='"+data.title+"'><p class='help-block'></p></div></div>"+
+							"<div class='control-group'><label class='control-label' for='input01'>活动标题</label><div class='controls'><input type='text' placeholder='placeholder' class='input-xlarge' name='title' id='title' value='"+data.title+"'><p class='help-block'></p></div></div>"+
 
-                			"<div class='control-group'><label class='control-label'>嘉宾</label><div class='controls'><div class='textarea'><textarea placeholder='' type='' class='' name='guest'>"+data.guest+"</textarea></div></div></div>"+
+							"<div class='control-group'><label class='control-label' for='input01'>出席企业</label><div class='controls'><div class='textarea'><textarea placeholder='' type='' class='' name='compere' id='compere'>"+data.compere+"</textarea>"+
+							"</div><p class='help-block'></p></div></div>"+				
+
+                			"<div class='control-group'><label class='control-label'>出席嘉宾</label><div class='controls'><div class='textarea'><textarea placeholder='' type='' class='' name='guest' id='guest'>"+data.guest+"</textarea></div></div></div>"+
 
                 			"<div class='control-group'><label class='control-label'>图片上传</label><div class='controls'><input class='input-file' type='file' name='img' id='img'></div></div>"+
-
-
-                			"<input type='button' id='sub'  value='提交修改'>"+
+                			"<input type='hidden' name='id' id='id' value='"+data.id+"'>"+
+                			"<input type='hidden' name='imgs' id='imgs' value='"+data.img+"'>" +
+                			
+                			"<div class='control-group'><div class='controls'><input type='button' id='sub' value='提交修改'></div></div>"+
 
                 			"</fieldset>"
 
@@ -34,7 +36,11 @@
 					$("#sub").click(function(){
 						var formData = new FormData();
 						var img = $("#img");
+						formData.append("id",$("#id").val());
+						formData.append("imgs",$("#imgs").val());
 						formData.append("img",img[0].files[0]);
+						formData.append("compere",$("#compere").val());
+						formData.append("guest",$("#guest").val());
 						formData.append("title",$("#title").val());
 						$.ajax({
 							

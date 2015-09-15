@@ -62,11 +62,11 @@ class CommonController extends Controller{
 			$upload->saveRule = time();
 			$result = $upload->upload();
 
-			if($result === false){
+			/*if($result === false){
 				$data['info'] = "上传失败！！";
 				$data['status'] = self::ERR + __LINE__;
 				$this->ajaxReturn($data);
-			}
+			}*/
 			
 				$info = $upload->getUploadFileInfo();
 				$data = $info[0]['savename'];

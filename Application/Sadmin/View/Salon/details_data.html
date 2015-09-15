@@ -1,0 +1,53 @@
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script>
+	$(function(){
+		var id = "{$_GET['id']}";
+		$.ajax({
+			url:"../../details_save/id/"+id,
+			type:"POST",
+			success:function(data){
+				if(data.status === 0){
+					var data = data.data;
+					$.each(data,function(i,obj){
+						$("#form1").html(
+							"<fieldset><div id='legend' class=''><legend class=''>提取地址</legend></div></fieldset>"+
+							"<div class='control-group'><label class='control-label' for='input01'>标题</label><div class='controls'><div id='adre'></div></div></div>"+
+							"<div class='control-group'><label class='control-label'>图片上传</label><div class='controls'><input class='input-file' type='file' name='img' id='img'></div></div>"+
+							"<div class='control-group><label class='control-label'><div class='controls'><input id='sub' type='button' value='点击提取'></div></div>"+
+							"<p id='adre'></p>"									
+						),
+						$("#form2").html(
+							"<fieldset><div id='legend' class=''><legend class=''>表单</legend></div>"+
+							"<div class='control-group'><label class='control-label' for='input01'>id</label><div class='controls'><input type='text' class='input-xlarge' name='sid' value='"+data.id+"' readonly='readonly'><p class='help-block'></p></div></div>"+
+							"</fieldset>"
+						)
+					})
+					$("#sub").click(function(){
+						var formData = new FormData();
+						var img = $("#img");
+						formData.append("img",img[0].files[0]);
+						$.ajax({
+							url:"/git/index.php/Sadmin/salon/img_url",
+							type:"POST",
+							data:formData,
+							contentType:false,
+							processData:false,
+							success:function(data){
+								if(data.status === 0){
+									$("#adre").html(data.img);
+								}
+							}
+						})
+					})
+				}
+			}
+		})
+	})
+
+</script>
+<form class="form-horizontal" method="post" enctype="multipart/form-data" id="form1">
+
+</form>
+<form class="form-horizontal" method="post" enctype="multipart/form-data" id="form2">
+
+</form>
