@@ -31,4 +31,31 @@ class SalonModel extends Model{
 		unlink($del);
 		return true;
 	}
+
+	public function save_by_id($id,$data){
+		$model = M('bimg');
+		$data = $model->where('id=%d',$id)->save($data);
+		if($data === false){
+			return false;
+		}
+		return true;
+	}
+
+	public function find_by_id($models,$id){
+		$model = $models;
+		$data = $model->where('id=%d',$id)->find();
+		if(!$data){
+			return false;
+		}
+		return $data;
+	}
+
+	public function select_all($model){
+		$model_salon = $model;
+		$data = $model_salon->select();
+		if(!$data){
+			return false;
+		}
+		return $data;
+	}
 }

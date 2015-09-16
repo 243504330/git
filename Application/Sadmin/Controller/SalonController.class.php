@@ -3,13 +3,15 @@ namespace Sadmin\Controller;
 use Think\Controller;
 use Org\Filter\Filter;
 class SalonController extends CommonController {
+    const ERR = 60000;
+
     public function index(){
     	$this->display();
     }
 
     public function index_data(){
         $model = M('salon');
-        $arr = $model->select();
+        $arr = D('salon')->select_all($model);
         $data['data'] = $arr;
         $data['status'] = 0;
         $this->ajaxReturn($data);
@@ -31,7 +33,7 @@ class SalonController extends CommonController {
         $data['title'] = Filter::get_str($_POST['title']);
         $data['compere'] = $_POST['compere'];
         $data['guest'] = $_POST['guest'];
-        $id = Filter::get_str($_POST['id']);
+        $id = (int)$_POST['id'];
         
         //保存
         $result = M('salon')->where('id=%d',$id)->save($data);
@@ -46,9 +48,15 @@ class SalonController extends CommonController {
     }
 
     public function edite(){   	
-    	$model = M('salon');
-        $id = Filter::get_str($_GET['id']);
-    	$profile = $model->where('id=%d',$id)->find();
+        $model = M('salon');
+        //过滤ID
+        $id = (int)$_GET['id'];
+        //模型查询
+    	$profile = D('salon')->find_by_id($model,$id);
+        if($profile === false){
+            $data['status'] = self::ERR + __LINE__;
+            $this->ajaxReturn($data);
+        }
     	$data['data'] = $profile;
         $data['status'] = 0;
         $this->ajaxReturn($data);	
@@ -58,10 +66,17 @@ class SalonController extends CommonController {
         $this->display();
     }
 
-    public function details_save(){
+    public function details_index(){
         $model = M('bimg');
-        $arr = $model->where('id=%d',1)->find();
-        $data['data'] = $arr;
+        //过滤ID
+        $id = (int)$_GET['id'];
+        //模型查询
+        $result = D('salon')->find_by_id($model,$id);
+        if($result === false){
+            $data['status'] = self::ERR + __LINE__;
+            $this->ajaxReturn($data);
+        }
+        $data['data'] = $result;
         $data['status'] = 0;
         $this->ajaxReturn($data);
     }
@@ -72,48 +87,27 @@ class SalonController extends CommonController {
         $this->ajaxReturn($data);
     }
 
-    public function details(){
-       $model = M('bimg');
-      
-         $arr = $model->where('id=%d',$_GET['id'])->find();
-      
-       $upload = new \Org\Net\UploadFile();
-
-            $upload->maxSize = 3145728;
-            $upload->allowExts = array('jpg','gif','png','jpeg');
-            $upload->savePath = './Public/images/';
-
-            $upload->saveRule = time();
-            $result = $upload->upload();
-            if($result){
-                $info = $upload->getUploadFileInfo();
-                $data['imgs']=$info[0]['savename'];
-             
-
-            }
-
-        $res = $model->where('id=%d',$_GET['id'])->save($_POST);
-
-        if($res){
-            $this->success('Ok');
+    public function details_save(){
+        //参数检查
+        $this->param_isset('POST',array('sid','says','details','bimg1','bimg2','bimg3'));
+        //参数过滤
+        $sid = (int)$_POST['sid'];
+        $data['data']['says'] = $_POST['says'];
+        $data['data']['details'] = Filter::get_str($_POST['details']);
+        $data['data']['bimg1'] = Filter::get_str($_POST['bimg1']);
+        $data['data']['bimg2'] = Filter::get_str($_POST['bimg2']);
+        $data['data']['bimg3'] = Filter::get_str($_POST['bimg3']);
+        //保存
+        $result = D('salon')->save_by_id($sid,$data['data']);
+        if($result === false){
+            $data['status'] = 3000000;
+            $data['info'] = '修改失败';
+            $this->ajaxReturn($data);
         }
-
-       
-      
-
-        $this->assign('arr',$arr);
-        $this->assign('data',$data);
-        $this->display();
+        $data['status'] = 0;
+        $this->ajaxReturn($data);
     }
 
-    public function simg(){
-        $model = M('simg');
-
-        $data = $model->select();
-        dump($data);
-
-        $this->display();
-    }
 
     public function add(){
         $model = M('simg');
