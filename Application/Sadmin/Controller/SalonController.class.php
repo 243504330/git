@@ -110,56 +110,12 @@ class SalonController extends CommonController {
 
 
     public function add(){
-        $model = M('simg');
 
-         $upload = new \Org\Net\UploadFile();
-
-            $upload->maxSize = 3145728;
-            $upload->allowExts = array('jpg','gif','png','jpeg');
-            $upload->savePath = './Public/images/';
-
-            $upload->saveRule = time();
-            $result = $upload->upload();
-            if($result){
-                $info = $upload->getUploadFileInfo();
-                $data['img']=$info[0]['savename'];
-              
-                dump($data['img']);
-
-            }
-
-        $data['sid']=$_GET['id'];
-        if($result){
-            $ok= $model->add($data);
-            if($ok){
-                 $this->success('ok');
-             }
-        }
-
-        $arr = $model->where('sid=%d',$_GET['id'])->select();
-        dump($arr);
-        $this->assign('arr',$arr);
-        $this->display();
 
     }
 
     public function del(){
         D('salon')->delete_img($_GET['id']);
        
-    
-
-       /* if($data){
-            $info['status']=0;
-            $info['msg']='修改成功';
-            $info['content']=$data;
-
-        }else{
-            $info['status']=1;
-            $info['msg']='修改失败';
-        }
-
-        $this->ajaxReturn($info,'JSON');*/
-       
-
     }
 }
