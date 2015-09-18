@@ -85,6 +85,56 @@
 		</div>
 		<!-- 内容头end-->
 		<!-- 沙龙内容 -->
+		<script src='/git/Public/js/jquery.js'></script>
+		<script>
+			var id = "<?php echo ($_GET['id']); ?>";
+			$(function(){
+				$.ajax({
+					url:"/git/index.php/Home/Salon/salon_data/id/"+id,
+					type:"POST",
+					success:function(data){
+						if(data.status === 0){
+							var data = data.data;
+							$.each(data,function(i,obj){
+								$("#div2").append(
+									"<div class='col-sm-3 img-portfolio'><a href='#'><img class='img-responsive img-hover img-related' src='/git/Public/images/"+obj.img+"'></a></div>"
+								)
+							})
+						}
+					}
+				})
+			})
+		</script>
+		<script>
+			var id = "<?php echo ($_GET['id']); ?>";
+			$(function(){
+				$.ajax({
+					url:"/git/index.php/Home/Salon/salon_data_2/id/"+id,
+					type:"POST",
+					success:function(data){
+						if(data.status === 0){
+							var data = data.data;
+							$.each(data,function(i,obj){
+								
+								$("#one").html(
+									"<img class='img-responsive' src='/git/Public/images/"+obj.bimg1+"'>"
+								),
+								$("#two").html(
+									"<img class='img-responsive' src='/git/Public/images/"+obj.bimg2+"'>"
+								),
+								$("#three").html(
+									"<img class='img-responsive' src='/git/Public/images/"+obj.bimg3+"'>"
+								),
+								$("#data").html(
+									"<h3>沙龙描述</h3><p>"+obj.says+"</p>"+
+									"<h3>沙龙细节</h3>"+obj.details
+								)
+							})
+						}
+					}
+				})
+			})
+		</script>
 		<div class="row">
 			<div class="col-md-8">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -97,15 +147,11 @@
 					<!-- 指示 end -->
 					<!-- 图片 -->
 					<div class="carousel-inner">
-						<div class="item active">
-							<img class="img-responsive" src="/git/Public/images/<?php echo ($bimg["bimg1"]); ?>" ale="">
-						</div>
-						<div class="item">
-							<img class="img-responsive" src="/git/Public/images/<?php echo ($bimg["bimg2"]); ?>" ale="">
-						</div>
-						<div class="item">
-							<img class="img-responsive" src="/git/Public/images/<?php echo ($bimg["bimg3"]); ?>" ale="">
-						</div>
+						
+							<div class='item active' id='one'></div>
+							<div class='item' id='two'></div>
+							<div class='item' id='three'></div>
+						
 					</div>
 					<!-- 图片end -->
 					<!-- 按钮 -->
@@ -120,11 +166,10 @@
 			</div>
 			<!-- 右边提示 -->
 			<div class="col-md-4">
-				<h3>沙龙描述</h3>
-				<p><?php echo ($bimg["says"]); ?></p>
-				<h3>沙龙细节</h3>
+				<div id="data">
 				
-					<?php echo ($bimg["details"]); ?>
+				
+				</div>
 				
 			</div>
 			<!-- 右边提示end -->
@@ -135,14 +180,9 @@
 			<div class="col-lg-12">
 				<h3 class="page-header">相关图片</h3>
 			</div>
+			<div id="div2">
 
-		
-		<?php if(is_array($img)): $i = 0; $__LIST__ = $img;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="col-sm-3 img-portfolio">
-				<a href="#">
-					<img class="img-responsive img-hover img-related" src="/git/Public/images/<?php echo ($v["img"]); ?>" ale="">
-				</a>
-			</div><?php endforeach; endif; else: echo "" ;endif; ?>
-		
+			</div>
 
 
 		</div>
