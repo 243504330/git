@@ -96,8 +96,8 @@
 <div class="container" id="myform">
 	<div class='row'>
 		<div class='col-lg-12'>
-			<h1 class='page-header'>创业沙龙
-				<samll>交流交流</samll>
+			<h3 class='page-header'>创业沙龙
+				<samll></samll>
 			</h1>
 			<ol class='breadcrumb'>
 				<li>

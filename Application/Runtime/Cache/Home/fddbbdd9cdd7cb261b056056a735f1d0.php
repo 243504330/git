@@ -74,8 +74,8 @@
 		<!-- 内容头 -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">沙龙详情 
-					<small>小标题</small>
+				<h3 class="page-header">沙龙详情 
+					<small></small>
 				</h1>
 				<ol class="breadcrumb">
 					<li><a href="<?php echo U('salon/index');?>">首页</a></li>

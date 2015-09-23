@@ -72,7 +72,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">商业合作<small></small>
+			<h3 class="page-header">商业合作<h3/><small></small>
 		</div>
 		<ol class="breadcrumb">
 			<li><a href="index.html">首页</a></li>
