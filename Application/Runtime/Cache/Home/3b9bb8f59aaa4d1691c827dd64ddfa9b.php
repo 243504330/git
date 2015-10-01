@@ -47,18 +47,14 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">产品项目<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="<?php echo U('salon/index');?>">创业沙龙</a>
+									<a href="<?php echo U('salon/index');?>">互联网沙龙</a>
 								</li>
 								<li>
-									<a href="#-2.html">第二个专栏</a>
+									<a href="#">网金汇俱乐部</a>
 								</li>
 								<li>
-									<a href="#-3.html">第三个专栏</a>
+									<a href="#">深圳互联网财经栏目</a>
 								</li>
-								<li>
-									<a href="#-4.html">第四个专栏</a>
-								</li>
-								
 							</ul>
 						</li>
 						
@@ -87,18 +83,29 @@
 	<div class="row">
 
 	</div>
+	<script src="/git/Public/js/jquery.js"></script>
+	<style>
+		.p:hover {
+			border-width: 0px 0px 0px 1px;
+			border-color:red;
+			border-style:solid;
+			transition: opacity 0.5s;
+			-webkit-transition:opacity 0.5s;
+			padding-left:15px;
+		}
+	</style>
 	<!-- 内容身体 -->
 	<div class="row">	
 		<div class="col-md-6">
-			<h4><p>深圳市福田区 红荔西路华茂欣园,银杏阁6F<br></p></h4>
+			<h4><p class="p">深圳市福田区 红荔西路华茂欣园,银杏阁6F<br></p></h4>
 			<div>
-				<p>联系电话</i>
+				<p class="p">联系电话</i>
 					:0755-83775006
 				</p>
-				<p>联系邮箱</i>
+				<p class="p">联系邮箱</i>
 					:<a href="mailto:243504330@qq.com">wangjinbang@wangjinbang.com</a>
 				</p>
-				<p>工作时间</i>
+				<p class="p">工作时间</i>
 					:Monday - Friday: 9:00 AM to 5:00 PM
 				</p>
 			</div>		

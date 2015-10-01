@@ -47,18 +47,14 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">产品项目<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="<?php echo U('salon/index');?>">创业沙龙</a>
+									<a href="<?php echo U('salon/index');?>">互联网沙龙</a>
 								</li>
 								<li>
-									<a href="#-2.html">第二个专栏</a>
+									<a href="#">网金汇俱乐部</a>
 								</li>
 								<li>
-									<a href="#-3.html">第三个专栏</a>
+									<a href="#">深圳互联网财经栏目</a>
 								</li>
-								<li>
-									<a href="#-4.html">第四个专栏</a>
-								</li>
-								
 							</ul>
 						</li>
 						
